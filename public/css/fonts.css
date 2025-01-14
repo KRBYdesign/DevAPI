@@ -1,0 +1,11 @@
+
+/* Font Sizes */
+:root {
+    font-family: "Helvetica Neue", Arial, sans-serif, system-ui;
+}
+h1 {
+    font-size: 2em;
+}
+p {
+    font-size: clamp(12pt, 1em, 16pt);
+}
