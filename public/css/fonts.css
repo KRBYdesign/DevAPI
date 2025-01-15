@@ -2,10 +2,11 @@
 /* Font Sizes */
 :root {
     font-family: "Helvetica Neue", Arial, sans-serif, system-ui;
+    color: var(--text);
 }
-h1 {
-    font-size: 2em;
+.title {
+    font-size: 2rem;
 }
-p {
-    font-size: clamp(12pt, 1em, 16pt);
+.copy {
+    font-size: clamp(12pt, 1rem, 16pt);
 }

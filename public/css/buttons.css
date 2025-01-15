@@ -1,0 +1,30 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: .25rem;
+    height: 2.5rem;
+    width: 10rem;
+    cursor: pointer;
+    will-change: auto;
+    transition: all ease 200ms;
+}
+.button-primary {
+    background-color: var(--primary);
+}
+.button-secondary {
+    background-color: var(--secondary);
+}
+.button-accent {
+    background-color: var(--accent);
+}
+.button-primary:hover {
+    box-shadow: 0 0 12px var(--primary);
+}
+.button-secondary:hover {
+    box-shadow: 0 0 12px var(--secondary);
+}
+.button-accent:hover {
+    box-shadow: 0 0 12px var(--accent);
+}
