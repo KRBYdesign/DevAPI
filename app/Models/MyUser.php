@@ -34,6 +34,15 @@ class MyUser
      */
     public static function forRegistration(string $name, string $email, string $password, bool $admin = false) : MyUser
     {
+        $nameArr = explode(' ', $name);
+
+        // throw error if name is greater or less than 2 elements.
+        if (count($nameArr) < 2) {
+            throw new \Exception("Please enter a first AND last name.");
+        } else if (count($nameArr) > 2) {
+            throw new \Exception("Please enter only a first and last name.");
+        }
+
         return new MyUser($name, $email, $password, $admin);
     }
 

@@ -56,7 +56,13 @@ class AuthController extends Controller
         }
 
         // create the new user
-        $newUser = MyUser::forRegistration($validated['name'], $validated['email'], $validated['password'], false);
+        try {
+            $newUser = MyUser::forRegistration($validated['name'], $validated['email'], $validated['password'], false);
+        } catch (\Exception $e) {
+            return back()->withErrors([
+                'name' => $e->getMessage(),
+            ]);
+        }
 
         // save the user
         $newUser->register();
